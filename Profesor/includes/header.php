@@ -1,7 +1,7 @@
 <?php
 session_start();
 //comprobar con sesion iniciada
-if(empty($_SESSION['active'])){
+if(empty($_SESSION['activeP'])){
     header('Location: ./');
 }
 ?>

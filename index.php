@@ -1,3 +1,12 @@
+<?php
+session_start();
+//comprobar con sesion iniciada
+if(!empty($_SESSION['active'])){
+    header('Location: administrador/');
+}else if(!empty($_SESSION['activeP'])){
+    header('Location: profesor/');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

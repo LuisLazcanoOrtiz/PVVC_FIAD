@@ -30,15 +30,15 @@ function loginUsuario() {
 
 function loginProfesor() {
     //variables de los campos
-    var login=$('#usuario').val();// se obtiene valores mediante el id
-    var pass=$('#pass').val();
+    var login=$('#usuarioProfesor').val();// se obtiene valores mediante el id
+    var pass=$('#passProfesor').val();
 
     $.ajax({
         url: './includes/loginProfesor.php',
         method: 'POST',//metodo de envio
         data: {//datos a recibir
-            login:login,
-            pass:pass
+            loginProfesor:login,
+            passProfesor:pass
         },
         success: function(data){//data son los datos recibidos del archivo login.php
         $('#messageProfesor').html(data);
